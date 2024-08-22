@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="background-image"></div>
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-content">
+          <h1>Train ticket booking system</h1>
+          <form>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Name" [(ngModel)]="name" >
+            </div>
+            <div class="form-group">
+              <label for="inputMobile">Mobile No</label>
+              <input type="tel" class="form-control" id="inputMobile" placeholder="Mobile Number">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inputFrom">From</label>
+                <input type="text" class="form-control" id="inputFrom" placeholder="Origin">
+              </div>
+              <div class="form-group">
+                <label for="inputTo">To</label>
+                <input type="text" class="form-control" id="inputTo" placeholder="Destination">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputDate">Select Date</label>
+              <input type="date" class="form-control" id="inputDate" href="#">
+            </div>
+            <div class="form-group">
+              <label for="inputTrain">Train Name</label>
+              <select class="form-control" id="inputTrain">
+                <option selected disabled>Select Train</option>
+                <option value="train1">Jbp Nir Ngp Passenger (58840)</option>
+                <option value="train2">Sc Nlr Special (07121)</option>
+                <option value="train3">Puri St Wkly Express (12743)</option>
+                <option value="train4">Okha Howrah Express (22905)</option>
+                <option value="train5">Surat Puri Express (12744)</option>
+                <option value="train6">Ngp Nir Jbp Passenger (58839)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputPrice">Price</label>
+              <input type="number" class="form-control" #inputPrice placeholder="Price" min="1">
+            </div>
+            <div class="form-group">
+              <label for="inputQuantity">Quantity</label>
+              <input type="number" class="form-control" #inputQuantity placeholder="Quantity" min="1">
+            </div>
+           
+            <div class="form-group">
+              <label for="inputTotal">Aval Ticket</label>
+              <label for="inputTotal">{{aval}}</label>
+              <!-- <p>{{result}}</p> -->
+            </div>
+            <div class="button-row">
+              <button type="button" class="btn btn-success" (click)="mul(inputQuantity.value,inputPrice.value)" >Book ticket</button>
+              <button type="button" class="btn btn-danger" (click)="cancel()">Cancel ticket</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
